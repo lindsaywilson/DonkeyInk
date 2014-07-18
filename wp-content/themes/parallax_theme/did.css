@@ -13,73 +13,73 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @font-face {
   font-family: 'UniSansSemiBoldItalic';
-  src: url('fonts/2B23CD_0_0.eot');
-  src: url('fonts/2B23CD_0_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_0_0.woff') format('woff'), url('fonts/2B23CD_0_0.ttf') format('truetype');
+  src: url('fonts/2B7394_0_0.eot');
+  src: url('fonts/2B7394_0_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_0_0.woff') format('woff'), url('fonts/2B7394_0_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansBookItalic';
-  src: url('fonts/2B23CD_1_0.eot');
-  src: url('fonts/2B23CD_1_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_1_0.woff') format('woff'), url('fonts/2B23CD_1_0.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'UniSansBold';
-  src: url('fonts/2B23CD_2_0.eot');
-  src: url('fonts/2B23CD_2_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_2_0.woff') format('woff'), url('fonts/2B23CD_2_0.ttf') format('truetype');
+  src: url('fonts/2B7394_1_0.eot');
+  src: url('fonts/2B7394_1_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_1_0.woff') format('woff'), url('fonts/2B7394_1_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansBoldItalic';
-  src: url('fonts/2B23CD_3_0.eot');
-  src: url('fonts/2B23CD_3_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_3_0.woff') format('woff'), url('fonts/2B23CD_3_0.ttf') format('truetype');
+  src: url('fonts/2B7394_2_0.eot');
+  src: url('fonts/2B7394_2_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_2_0.woff') format('woff'), url('fonts/2B7394_2_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansBook';
-  src: url('fonts/2B23CD_4_0.eot');
-  src: url('fonts/2B23CD_4_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_4_0.woff') format('woff'), url('fonts/2B23CD_4_0.ttf') format('truetype');
+  src: url('fonts/2B7394_3_0.eot');
+  src: url('fonts/2B7394_3_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_3_0.woff') format('woff'), url('fonts/2B7394_3_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansHeavy';
-  src: url('fonts/2B23CD_5_0.eot');
-  src: url('fonts/2B23CD_5_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_5_0.woff') format('woff'), url('fonts/2B23CD_5_0.ttf') format('truetype');
+  src: url('fonts/2B7394_4_0.eot');
+  src: url('fonts/2B7394_4_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_4_0.woff') format('woff'), url('fonts/2B7394_4_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansHeavyItalic';
-  src: url('fonts/2B23CD_6_0.eot');
-  src: url('fonts/2B23CD_6_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_6_0.woff') format('woff'), url('fonts/2B23CD_6_0.ttf') format('truetype');
+  src: url('fonts/2B7394_5_0.eot');
+  src: url('fonts/2B7394_5_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_5_0.woff') format('woff'), url('fonts/2B7394_5_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansLight';
-  src: url('fonts/2B23CD_7_0.eot');
-  src: url('fonts/2B23CD_7_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_7_0.woff') format('woff'), url('fonts/2B23CD_7_0.ttf') format('truetype');
+  src: url('fonts/2B7394_6_0.eot');
+  src: url('fonts/2B7394_6_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_6_0.woff') format('woff'), url('fonts/2B7394_6_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansLightItalic';
-  src: url('fonts/2B23CD_8_0.eot');
-  src: url('fonts/2B23CD_8_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_8_0.woff') format('woff'), url('fonts/2B23CD_8_0.ttf') format('truetype');
+  src: url('fonts/2B7394_7_0.eot');
+  src: url('fonts/2B7394_7_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_7_0.woff') format('woff'), url('fonts/2B7394_7_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansRegularItalic';
-  src: url('fonts/2B23CD_9_0.eot');
-  src: url('fonts/2B23CD_9_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_9_0.woff') format('woff'), url('fonts/2B23CD_9_0.ttf') format('truetype');
+  src: url('fonts/2B7394_8_0.eot');
+  src: url('fonts/2B7394_8_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_8_0.woff') format('woff'), url('fonts/2B7394_8_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansRegular';
-  src: url('fonts/2B23CD_A_0.eot');
-  src: url('fonts/2B23CD_A_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_A_0.woff') format('woff'), url('fonts/2B23CD_A_0.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'UniSansSemiBold';
-  src: url('fonts/2B23CD_B_0.eot');
-  src: url('fonts/2B23CD_B_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_B_0.woff') format('woff'), url('fonts/2B23CD_B_0.ttf') format('truetype');
+  src: url('fonts/2B7394_9_0.eot');
+  src: url('fonts/2B7394_9_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_9_0.woff') format('woff'), url('fonts/2B7394_9_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansThin';
-  src: url('fonts/2B23CD_C_0.eot');
-  src: url('fonts/2B23CD_C_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_C_0.woff') format('woff'), url('fonts/2B23CD_C_0.ttf') format('truetype');
+  src: url('fonts/2B7394_A_0.eot');
+  src: url('fonts/2B7394_A_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_A_0.woff') format('woff'), url('fonts/2B7394_A_0.ttf') format('truetype');
 }
 @font-face {
   font-family: 'UniSansThinItalic';
-  src: url('fonts/2B23CD_D_0.eot');
-  src: url('fonts/2B23CD_D_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B23CD_D_0.woff') format('woff'), url('fonts/2B23CD_D_0.ttf') format('truetype');
+  src: url('fonts/2B7394_B_0.eot');
+  src: url('fonts/2B7394_B_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_B_0.woff') format('woff'), url('fonts/2B7394_B_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'UniSansBold';
+  src: url('fonts/2B7394_C_0.eot');
+  src: url('fonts/2B7394_C_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_C_0.woff') format('woff'), url('fonts/2B7394_C_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'UniSansSemiBold';
+  src: url('fonts/2B7394_D_0.eot');
+  src: url('fonts/2B7394_D_0.eot?#iefix') format('embedded-opentype'), url('fonts/2B7394_D_0.woff') format('woff'), url('fonts/2B7394_D_0.ttf') format('truetype');
 }
 .UniSansSemiBold {
   font-family: 'UniSansSemiBold';
@@ -291,11 +291,6 @@ SECTIONS
 .loops-wrapper.list-post .post {
   margin-bottom: 15px;
 }
-.loops-wrapper.grid4 .portfolio-expanded .post-title {
-  border-bottom: 1px solid #c4c3bb;
-  margin: 0 0 10px;
-  padding: 0 0 10px;
-}
 section#about {
   padding-bottom: 100px;
 }
@@ -313,6 +308,16 @@ section#process .col2-1.last {
 }
 section#services .text {
   margin-bottom: 30px;
+}
+section#contact form {
+  margin-top: 40px;
+  padding: 0 85px;
+}
+/* PORTFOLIO SECTION */
+.loops-wrapper.grid4 .portfolio-expanded .post-title {
+  border-bottom: 1px solid #c4c3bb;
+  margin: 0 0 10px;
+  padding: 0 0 10px;
 }
 .section#portfolio {
   background: url(images/tile_horizontal.png);
@@ -391,10 +396,10 @@ section#services .text {
   position: relative;
 }
 .post .carousel-pager a {
-  background: #cccccc;
+  background: #c1c1c1 !important;
 }
 .post .carousel-pager .selected {
-  background: #c50000;
+  background: #c50000 !important;
 }
 .slider-image-caption {
   background: #000;
@@ -415,7 +420,7 @@ section#services .text {
 .post .carousel-prev,
 .post .carousel-next {
   top: auto;
-  bottom: 19px;
+  bottom: 22px;
   height: 40px;
   display: block !important;
   z-index: 999;
@@ -425,7 +430,86 @@ section#services .text {
   transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
-  bottom: 31px;
+  bottom: 28px;
+}
+/* CLIENT FEEDBACK SECTION */
+#client-list {
+  float: left;
+  width: 25%;
+}
+#clients-feedback .themify_builder_content {
+  float: right;
+  width: 75%;
+  margin-top: 80px;
+  color: #fff;
+}
+#clients-feedback .themify_builder_content .testimonial-title a {
+  color: #94e0d1;
+}
+#clients-feedback .themify_builder_content .testimonial-name,
+#clients-feedback .themify_builder_content .testimonial-author em {
+  font-style: normal;
+}
+#clients-feedback .themify_builder_content .testimonial-author br {
+  display: none;
+}
+#clients-feedback .themify_builder_content .testimonial-name {
+  padding-right: 2px;
+}
+#clients-feedback .themify_builder_content .testimonial-name:after {
+  content: '';
+  border-radius: 10px;
+  width: 2px;
+  height: 2px;
+  border: 1px solid #fff;
+  display: inline-block;
+  background: #fff;
+  margin: 0 0 4px 4px;
+}
+#clients-feedback .themify_builder_content .module-slider .carousel-nav-wrap .carousel-next,
+#clients-feedback .themify_builder_content .module-slider .carousel-nav-wrap .carousel-prev {
+  width: auto;
+  height: auto;
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  bottom: auto;
+  top: 50%;
+  margin-top: -35px;
+}
+#clients-feedback .themify_builder_content .themify_builder_slider .slide-content {
+  margin: 0 50px;
+}
+.post .module .carousel-next:after,
+.post .module .carousel-prev:after {
+  font-size: 80px;
+  font-size: 8rem;
+  border: none;
+  width: auto;
+  height: auto;
+}
+.frontend .themify_builder_content {
+  clear: none!important;
+}
+/* 
+FORM
+================================================ */
+.form-item {
+  margin-bottom: 8px;
+}
+.form-left {
+  float: left;
+  width: 33%;
+}
+.form-right {
+  float: left;
+  width: 67%;
+}
+p.form-footnote:last-of-type {
+  clear: both;
+  padding-top: 30px;
+  font-size: 28px;
+  font-size: 2.8rem;
+  margin: 0 -85px;
 }
 /* 
 MAIN NAVIGATION

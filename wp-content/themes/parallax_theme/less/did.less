@@ -55,7 +55,6 @@ SECTIONS
 .section-content{ text-align:center; margin-top: 20px;}
 
 .loops-wrapper.list-post .post { margin-bottom:15px} 
-.loops-wrapper.grid4 .portfolio-expanded .post-title{ border-bottom:1px solid #c4c3bb; margin:0 0 10px; padding:0 0 10px}
 
 section#about{ padding-bottom:100px}
 section#process{ 
@@ -65,6 +64,12 @@ section#process{
 	.col2-1.last{ text-align:left}
 }
 section#services .text{ margin-bottom:30px}
+section#contact form{ margin-top:40px; padding:0 85px}
+
+
+/* PORTFOLIO SECTION */
+
+.loops-wrapper.grid4 .portfolio-expanded .post-title{ border-bottom:1px solid #c4c3bb; margin:0 0 10px; padding:0 0 10px}
 
 .section#portfolio{
 	background:url(images/tile_horizontal.png); color:#000;
@@ -87,15 +92,44 @@ section#services .text{ margin-bottom:30px}
 }
 
 .slideshow li{ position:relative}
-.post .carousel-pager a{ background:#ccc}
-.post .carousel-pager .selected{ background:#c50000}
+.post .carousel-pager a{ background:#c1c1c1!important}
+.post .carousel-pager .selected{ background:#c50000 !important}
 .slider-image-caption{ background:#000; font-family:'UniSansBold'; .font-size(1.4)}
 .post .carousel-next:after,
 .post .carousel-prev:after{ font-family:'icomoon'; color:#fff; content: "\e600"; .font-size(2.8); border-left:1px solid #585c5b; padding:3px}
 .post .carousel-prev,
-.post .carousel-next{ top:auto; bottom:19px; height:40px;  display:block !important; z-index:999; background:#000; }
-.post .carousel-prev{ transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg); bottom:31px}
+.post .carousel-next{ top:auto; bottom:22px; height:40px;  display:block !important; z-index:999; background:#000; }
+.post .carousel-prev{ transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg); bottom:28px}
 
+
+/* CLIENT FEEDBACK SECTION */
+
+#client-list{ float:left; width:25%}
+#clients-feedback .themify_builder_content{ 
+	float:right; width:75%; margin-top:80px; color:#fff; 
+	.testimonial-title a{ color:#94e0d1}
+	.testimonial-name,
+	.testimonial-author em{ font-style:normal}
+	.testimonial-author br{ display:none}
+	.testimonial-name{ padding-right:2px;}
+	.testimonial-name:after{content:''; border-radius:10px; width:2px; height:2px; border:1px solid #fff; display:inline-block; background:#fff; margin:0 0 4px 4px}
+	.module-slider .carousel-nav-wrap .carousel-next,
+	.module-slider .carousel-nav-wrap .carousel-prev{ width:auto; height:auto; position:absolute; color:rgba(255,255,255,0); bottom:auto; top:50%; margin-top:-35px}
+	.themify_builder_slider .slide-content{ margin:0 50px}
+}
+.post .module .carousel-next:after, 
+.post .module .carousel-prev:after{ .font-size(8); border:none; width:auto; height:auto}
+.frontend .themify_builder_content{clear:none!important;}
+
+
+/* 
+FORM
+================================================ */
+
+.form-item{ margin-bottom:8px}
+.form-left{ float:left; width:33%}
+.form-right{ float:left; width:67%}
+p.form-footnote:last-of-type{ clear:both; padding-top:30px; .font-size(2.8); margin:0 -85px}
 
 
 /* 
