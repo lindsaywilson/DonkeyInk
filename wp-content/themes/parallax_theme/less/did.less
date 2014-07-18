@@ -1,0 +1,223 @@
+
+
+html { font-size: 62.5%; /* Sets up the Base 10 stuff */}
+body{ font-family:'UniSansRegular'; color:#000; .font-size(1.8); line-height:1.4}
+
+
+/*
+ HEADER
+================================================ */
+
+#header{
+	hgroup{ max-width:460px; margin:0 auto; .font-size(2); text-align:left; padding:100px 0 0 250px; color:#2e2d2d}
+	h1#site-logo{ text-indent:-999em; background:url(images/logo.png); width:199px; height:96px}
+	.intro-text{ padding-left:30px; font-family:'UniSansBook'}
+	.intro-text a{ color:#94e0d1;}
+	.welcome{ .font-size(2.4)}
+	.micetype{ margin-top:30px}
+	.icon-van{ position:absolute; top:0px; right:20px; .font-size(9); opacity:.5}
+}
+
+
+/**
+ HTML ELEMENTS
+================================================ */
+
+h1, h2, h3, h4, h5, h6{ font-weight:normal}
+h1{ .font-size(5)}
+h2{ .font-size(2.4)}
+
+a{ color:#000; text-decoration:none; .transition()}
+
+a.button{ 
+	background:#000; color:#d3e2cd; display:inline-block; text-align:center; position:relative; padding:5px 0; .font-size(1.6); max-width:280px;
+	div{ padding-right:70px}
+	div:after{ font-family:'icomoon'; content: "\e600"; color:#fff; .font-size(6); position:absolute; right:10px; top:12px}
+	span{ font-family:'UniSansSemiBold'; .font-size(3); display:block; line-height:1;margin-bottom:10px;color:#fff}
+}
+a.button:hover{ background:#c60000}
+
+.loops-wrapper.grid4 .post-title{ .font-size(1.6)}
+.micetype{ .font-size(1.26)}
+
+.box{ color:#fff; background:rgba(0,0,0,0.6); float:left; width:48%; padding:15px 10px 20px; margin:1%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.box.last{ float:none; display:inline-block}
+.box h3{ font-family:'UniSansSemiBold'; font-size:3rem; }
+
+
+/* 
+SECTIONS
+================================================ */
+
+.section-inner{ padding:85px 0 45px}
+.section-title,
+.section-subhead{ text-align:center}
+.section-content{ text-align:center; margin-top: 20px;}
+
+.loops-wrapper.list-post .post { margin-bottom:15px} 
+.loops-wrapper.grid4 .portfolio-expanded .post-title{ border-bottom:1px solid #c4c3bb; margin:0 0 10px; padding:0 0 10px}
+
+section#about{ padding-bottom:100px}
+section#process{ 
+	color:#fff;
+	.col2-1{ margin-top:50px; }
+	.col2-1.first{ text-align:right}
+	.col2-1.last{ text-align:left}
+}
+section#services .text{ margin-bottom:30px}
+
+.section#portfolio{
+	background:url(images/tile_horizontal.png); color:#000;
+	.section-content{ margin-top: 40px;}
+}
+#content .portfolio-expanded{ 
+	border-bottom:1px solid #000; border-top:1px solid #000; padding:30px 0 60px; margin-bottom:45px;
+	h2{ .font-size(1.4); font-family:'UniSansSemiBold'}
+	.post-title { .font-size(3.4);}
+	.entry-content{ font-family:'UniSansSemiBold'; .font-size(1.6)}
+	.tasks{ .font-size(1.4); position:absolute; bottom:-55px; left:0; padding-right:120px}
+	a.visit-site{ .font-size(1.8);position:absolute; right:0; bottom:-55px; color:#000 }
+	a.visit-site:after{ content: "\e600"; border-left:1px solid #000; .font-size(2.8); position:relative; bottom:-8px; margin-left:10px }
+	a.visit-site:hover,
+	a.visit-site:hover:after{ color:#609f01}
+	a.close-expanded { position: absolute; top: 0; right: 0; border-left:1px solid #000; color:#000}
+	a.close-expanded:before{ display: block; padding:8px}
+	a.close-expanded:hover:before{ color:#b40000}
+	.themify_builder_content{ display:none}
+}
+
+.slideshow li{ position:relative}
+.post .carousel-pager a{ background:#ccc}
+.post .carousel-pager .selected{ background:#c50000}
+.slider-image-caption{ background:#000; font-family:'UniSansBold'; .font-size(1.4)}
+.post .carousel-next:after,
+.post .carousel-prev:after{ font-family:'icomoon'; color:#fff; content: "\e600"; .font-size(2.8); border-left:1px solid #585c5b; padding:3px}
+.post .carousel-prev,
+.post .carousel-next{ top:auto; bottom:19px; height:40px;  display:block !important; z-index:999; background:#000; }
+.post .carousel-prev{ transform:rotate(180deg); -ms-transform:rotate(180deg); -webkit-transform:rotate(180deg); bottom:31px}
+
+
+
+/* 
+MAIN NAVIGATION
+================================================ */
+#nav-bar {
+	background-color: #000; position: absolute; z-index: 9999; bottom: 0; left: 0; width: 100%; padding: 0; margin: 0;
+	.logo{ color:@red; font-family:'UniSansLight'; position:absolute; bottom:7px; left:10%; .font-size(3)}
+	.logo span{ font-family:'UniSansRegular'}
+	a:before{ color:@grey}
+	a.icon-email{ position:absolute; left:15px; bottom:0px}
+	a.icon-email:before{ .font-size(5.3); }
+	.icon-facebook,
+	.icon-behance{ position:absolute; bottom:14px; right:20px;}
+	.icon-facebook:before,
+	.icon-behance:before{ .font-size(2.6)}
+	.icon-facebook{ right:47px}
+}
+.ie #nav-bar { position: fixed; top: 0; bottom: auto;}
+#nav-bar.fixed-nav-bar { position: fixed; top: 0; bottom: auto; left: 0;}
+.admin-bar #nav-bar.fixed-nav-bar { top: 32px;}
+.ie #main-nav { top: 60px; bottom: auto; }
+
+#main-nav {
+	text-align: center; overflow: visible;
+	li { margin: 0; padding: 0; list-style: none; display: inline-block; zoom:1; *display:inline; position: relative; }
+	li a { font-family:'UniSansBook'; .font-size(2);  display: block; padding: 20px 0 10px 0; margin: 0 13px; text-decoration: none; color:@lightgrey}
+	li a:hover,
+	li.current_page_item a,
+	li.current-menu-item a,
+	li.current_page_item a:hover,
+	li.current-menu-item a:hover{ color:@red;}
+
+	ul li a,
+	.current_page_item ul li a,
+	ul .current_page_item a,
+	.current-menu-item ul a,
+	ul .current-menu-item a { padding: 10px 0; margin: 0; display: block; width: 170px; background: none; border-top: 1px solid #e5e5e5;}
+	ul li:first-child a { border-top: none;}
+
+	ul{ margin: 0 0 0 -100px; padding: 5px 0; list-style: none; position: absolute; background: #fff; z-index: 1000; display: none; left: 50%; border: solid 1px #ccc;}
+
+	ul:before {
+	position: absolute;
+	display: block;
+	content: ' ';
+	width: 0;
+	height: 0;
+	top: -8px;
+	left: 50%;
+	margin-left: -4px;
+	border-bottom: 8px solid #fff;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	z-index: -1;
+	}
+	ul li {
+	background: none;
+	padding: 0 12px;
+	margin: 0;
+	float: none;
+	}
+
+	ul ul {
+	margin: 0 0 0 97px;
+	top: -6px;
+	text-align: left;
+	}
+	ul ul:before {
+	top: 15px;
+	left: -17px;
+	margin-left: 0;
+	border-right: 8px solid #ccc;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	}
+	ul ul:after { display: none;}
+	li:hover > ul { display: block; }
+
+}
+
+/* home navigation */
+.home #main-nav ul {
+	bottom: 60px;
+}
+.home #main-nav ul ul {
+	bottom: auto;
+}
+.home #main-nav ul ul:before {
+	top: 15px;
+	border-right: 8px solid #ccc;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+.home #main-nav ul:before {
+	top: auto;
+	bottom: -8px;
+	border-bottom: none;
+	border-top: 8px solid #fff;
+}
+.home .fixed-nav-bar #main-nav ul,
+.home.ie #main-nav ul {
+	bottom: auto;
+	top: 60px;
+}
+.home .fixed-nav-bar #main-nav ul ul,
+.home.ie #main-nav ul ul {
+	top: -6px;
+}
+.home .fixed-nav-bar #main-nav ul:before,
+.home.ie #main-nav ul:before {
+	bottom: auto;
+	top: -8px;
+	border-top: none;
+	border-bottom: 8px solid #fff;
+}
+.home .fixed-nav-bar #main-nav ul ul:before,
+.home.ie #main-nav ul ul:before {
+	top: 15px;
+	left: -17px;
+	margin-left: 0;
+	border-right: 8px solid #ccc;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}

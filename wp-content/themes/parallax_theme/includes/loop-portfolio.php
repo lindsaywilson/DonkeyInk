@@ -12,7 +12,7 @@ global $themify; ?>
 	
 	<?php themify_before_post_image(); // Hook ?>
 	
-	<?php if ( themify_check( 'gallery_shortcode' ) && 'yes' != $themify->hide_image ) { ?>
+	<?php if ( themify_check( 'gallery_shortcode' ) && 'yes' != $themify->hide_image && 'none' != $themify->display_content && ! is_attachment() ) { ?>
 		<div class="post-image">
 			<?php
 			// Get images from [gallery]
@@ -85,6 +85,9 @@ global $themify; ?>
 
 		<?php if($themify->hide_title != 'yes'): ?>
 			<?php if($themify->unlink_title == 'yes'): ?>
+            	<?php if ( 'none' != $themify->display_content && ! is_attachment() && get_field('subheading') ) : ?>
+                <h2><?php print get_field('subheading'); ?></h2>
+                <?php endif; ?>
 				<h1 class="post-title entry-title" itemprop="name"><?php the_title(); ?></h1>
 			<?php else: ?>
 				<h1 class="post-title entry-title" itemprop="name"><a href="<?php echo themify_get_featured_image_link(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
@@ -106,6 +109,13 @@ global $themify; ?>
 		<?php else: ?>
 
 			<?php the_content(themify_check('setting-default_more_text')? themify_get('setting-default_more_text') : __('More &rarr;', 'themify')); ?>
+            
+            <?php if ( get_field('tasks') ) : ?>
+                <div class="tasks">Tasks: <?php print get_field('tasks'); ?></div>
+			<?php endif; ?>
+            <?php if ( get_field('website_url') ) : ?>
+                <a href="<?php print get_field('website_url'); ?>" class="visit-site" rel="external">Visit Site</a>
+			<?php endif; ?>
 
 		<?php endif; //display content ?>
 

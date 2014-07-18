@@ -1,0 +1,13 @@
+
+
+@grey:#8e9994;
+@lightgrey:#798780;
+@red: #b30000;
+
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+.transition{ transition: all 0s ease 0s, all 0.15s ease 0s;}

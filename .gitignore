@@ -1,0 +1,11 @@
+# Ignore configuration files that may contain sensitive information.
+wp-config.php
+
+# Ignore paths that contain user-generated content.
+wp-content/uploads
+
+# Ignore cache files
+wp-content/cache
+
+# Ignore grunt/node setup
+wp-content/themes/parallax_theme/node_modules
