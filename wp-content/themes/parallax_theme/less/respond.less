@@ -1,32 +1,87 @@
 
-/* ------------------------------ */
-/* CONSTANTS
-/* ------------------------------ */
 
-.font-size(@sizeValue) {
-  @remValue: @sizeValue;
-  @pxValue: (@sizeValue * 10);
-  font-size: ~"@{pxValue}px"; 
-  font-size: ~"@{remValue}rem";
+@media screen and (max-width: 980px) {
+
+	section#contact form{ padding:0}
+	p.form-footnote:last-of-type{ margin:0}
+
 }
 
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 767px) {
 	
+.logo .hide-mobile{ display:none}
+#nav-bar .logo{ left:25%}
 
 	
 }
 
+@media screen and (max-width: 700px) {
+
+	#header .intro-text{ display:none}
+	
+	
+	#content .portfolio-expanded{ 
+		padding-bottom:20px;
+		h2{ position:absolute; top:-15px}
+		h1{ position:absolute; top:5px; width:100%}
+		.post-image{ padding-top:80px}
+		.tasks{ position:static; padding:20px 0 0; text-align:center}
+		a.visit-site{ position:static; display:block; text-align:center; margin-top:20px}
+		a.visit-site:after{ border:none; margin:0; bottom:-6px}
+	}
+	
+	.box{ float:none; width:100%; margin:20px 0 0}
+	
+	#client-list,
+	#clients-feedback .themify_builder_content{ float:none; width:auto}
+	.post .module .carousel-next,  .post .module .carousel-prev{ display:none!important}
+	#clients-feedback .themify_builder_content .themify_builder_slider .slide-content{ margin:0}
+	.themify_builder_slider li{ font-size:1.4rem}
+	#clients-feedback .themify_builder_content .testimonial-name{ display:block; padding:0}
+	#clients-feedback .themify_builder_content .testimonial-name:after{ display:none}
+	
+	.form-left,
+	.form-right{ float:none; width:auto; padding:0}
+
+}
+
+
+@media screen and (max-width: 640px) {
+	
+	#headerwrap{ background-position:37% 0! important}
+	
+	section#services .text,
+	section#process,
+	section#about,
+	#main-nav li#menu-item-2346,
+	#main-nav li#menu-item-2224{ display:none}
+	
+	section#intro-text{ background:#1b2029; color:#fff; text-align:center}
+	section#intro-text .section-inner{ padding-top:30px}
+	section#intro-text a{ color:#94e0d1}
+
+}
 
 @media screen and (max-width: 480px) {
 	
+	#menu-icon { left:3%}
+	#main-nav{ text-align:left}
+	#main-nav li a{ margin:0; padding:0 22px;}
 	
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
 
-
+	#header .icon-van{ font-size:6.5rem; right:10px}
+	#header hgroup{ padding:150px 0 0 150px}
+	#header h1#site-logo{ width:139px; height:67px; background-size:cover}
+	
+	section#clients-feedback{ background-image:url(images/bg_section_feedback_mobile.jpg)!important; background-position:50% 0 !important; background-attachment:scroll !important}
+	#client-list{ color:#fff}
+	section#contact{ background-position:50% 0 !important; background-attachment:scroll !important}
 
 }
 
@@ -44,7 +99,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
 
-@retina{ background-image: url(images/bg_watermark@2x.png); background-size:537px 218px} 
+@retina{ } 
 
 
 }

@@ -78,7 +78,7 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 						}
 
 						// close mobile menu
-						if($(window).width() <= 760 && $('#main-nav').is(':visible')){
+						if($(window).width() <= 1100 && $('#main-nav').is(':visible')){
 							$('#menu-icon').trigger('click');
 						}
 
@@ -321,7 +321,7 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 	// Fixed Header /////////////////////////
 	FixedHeader = {
 		init : function() {
-			this.headerHeight = $('#header hgroup').outerHeight() - $('#nav-bar').outerHeight();
+			this.headerHeight = $('#header').outerHeight() - $('#nav-bar').outerHeight();
 
 			if ( $('body').hasClass('ie') ) { $('html, body').addClass('iefix'); }
 

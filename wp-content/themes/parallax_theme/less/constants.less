@@ -3,6 +3,7 @@
 @grey:#8e9994;
 @lightgrey:#798780;
 @red: #b30000;
+@greengrey:#454d49;
 
 .font-size(@sizeValue) {
   @remValue: @sizeValue;
@@ -10,4 +11,11 @@
   font-size: ~"@{pxValue}px"; 
   font-size: ~"@{remValue}rem";
 }
+
 .transition{ transition: all 0s ease 0s, all 0.15s ease 0s;}
+
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}

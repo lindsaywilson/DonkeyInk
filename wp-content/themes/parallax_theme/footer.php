@@ -22,8 +22,13 @@
 			} ?>
 	
 			<div class="footer-text clearfix">
-				<?php themify_the_footer_text(); ?>
-				<?php themify_the_footer_text('right'); ?>
+				
+                &copy;1999 - <?php print date(Y); ?> <a href="http://donkeyink.com/">Donkey Ink Design</a><br />
+Certain projects featured in the Portfolio sections are copyrighted by the client.<br />
+Photography: Jamie Purches + Avocado Amy
+                
+				<?php //themify_the_footer_text(); ?>
+				<?php //themify_the_footer_text('right'); ?>
 			</div>
 			<!-- /footer-text --> 
 			<?php themify_footer_end(); // hook ?>
