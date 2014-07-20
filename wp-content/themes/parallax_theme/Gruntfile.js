@@ -20,7 +20,7 @@
 					},
 					files: {
 						// compilation.css : source.less
-						"did.css": "less/app.less"
+						"style.css": "less/app.less"
 					}
 			},
 		},

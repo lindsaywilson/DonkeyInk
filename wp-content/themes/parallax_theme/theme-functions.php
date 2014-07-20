@@ -70,9 +70,6 @@ function themify_theme_enqueue_scripts(){
 	
 	// Themify base styling
 	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array(), $theme_version);
-
-	// Themify Media Queries CSS
-	wp_enqueue_style( 'themify-media-queries', THEME_URI . '/media-queries.css');
 	
 
 	//Google Web Fonts embedding
