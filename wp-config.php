@@ -20,12 +20,14 @@ define('DB_NAME', 'donkeyink');
 
 /** MySQL database username */
 define('DB_USER', 'root');
+//define('DB_USER', 'donkeyink');
 
 /** MySQL database password */
 define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
+//define('DB_HOST', 'mysql1087.servage.net');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

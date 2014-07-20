@@ -66,7 +66,7 @@
 			
 			<div id="nav-bar" class="clearfix">
             	<a class="logo" href="/">D<span class="hide-mobile">onkey </span><span class="reg">I<span class="hide-mobile">nk </span></span><span>D<span class="hide-mobile">esign</span></a>
-            	<a class="icon-email" href="mailto:jamie@donkeyink.com"></a>
+            	<a class="icon-email" href="mailto:info@donkeyink.com"></a>
                 <a class="icon-facebook" href="https://www.facebook.com/pages/Donkey-Ink-Design/125842197431168" rel="external"></a>
                 <a class="icon-behance" href="https://www.behance.net/donkeyink/" rel="external"></a>
                 <nav>

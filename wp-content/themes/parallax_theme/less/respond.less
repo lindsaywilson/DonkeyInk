@@ -410,9 +410,26 @@
 }
 
 @media screen and (max-width: 700px) {
-
+	
+	#headerwrap{ background-position:28% 0! important}
+	#header{
+		hgroup{ position:absolute; top:46%; left:49%; padding:0; width:auto}
+		h1#site-logo{ padding:0}
+		.icon-logo:before{font-size:16rem}
+		.icon-van{ .font-size(6.5); right:10px}
+	}
+	
+	section#services .text,
+	section#process,
+	section#about,
+	#main-nav li#menu-item-2346,
+	#main-nav li#menu-item-2224,
+	#intro-text .micetype,
 	#header .intro-text{ display:none}
 	
+	section#intro-text{ background:#1b2029; color:#fff; text-align:center}
+	section#intro-text .section-inner{ padding-top:30px}
+	section#intro-text a{ color:#94e0d1}
 	
 	#content .portfolio-expanded{ 
 		padding-bottom:20px;
@@ -439,29 +456,6 @@
 
 }
 
-
-@media screen and (max-width: 640px) {
-	
-	#headerwrap{ background-position:28% 0! important}
-	#header{
-		hgroup{ position:absolute; top:46%; left:49%; padding:0 0 0 0}
-		h1#site-logo{ padding:0}
-		.icon-logo:before{font-size:16rem}
-		.icon-van{ .font-size(6.5); right:10px}
-	}
-	
-	section#services .text,
-	section#process,
-	section#about,
-	#main-nav li#menu-item-2346,
-	#main-nav li#menu-item-2224{ display:none}
-	
-	section#intro-text{ background:#1b2029; color:#fff; text-align:center}
-	section#intro-text .section-inner{ padding-top:30px}
-	section#intro-text a{ color:#94e0d1}
-
-}
-
 @media screen and (max-width: 480px) {
 	
 	#menu-icon { left:3%}
@@ -473,6 +467,7 @@
 
 @media screen and (max-width: 360px) {
 	
+	section#services{ background-image:url(images/bg_section_services_mobile.jpg)!important; background-position:50% 0 !important; background-attachment:scroll !important}
 	section#clients-feedback{ background-image:url(images/bg_section_feedback_mobile.jpg)!important; background-position:50% 0 !important; background-attachment:scroll !important}
 	#client-list{ color:#fff}
 	section#contact{ background-position:50% 0 !important; background-attachment:scroll !important}

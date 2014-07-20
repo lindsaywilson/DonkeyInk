@@ -114,7 +114,7 @@ global $themify; ?>
                 <div class="tasks">Tasks: <?php print get_field('tasks'); ?></div>
 			<?php endif; ?>
             <?php if ( get_field('website_url') ) : ?>
-                <a href="<?php print get_field('website_url'); ?>" class="visit-site" rel="external">Visit Site</a>
+                <a href="<?php print get_field('website_url'); ?>" class="visit-site" target="_blank">Visit Site</a>
 			<?php endif; ?>
 
 		<?php endif; //display content ?>

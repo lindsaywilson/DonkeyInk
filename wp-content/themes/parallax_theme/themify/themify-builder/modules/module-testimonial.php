@@ -145,7 +145,7 @@ class Builder_Testimonial {
 					else {
 						$out .= '<em class="testimonial-title">';
 					}
-					$out .= '<a href="'.esc_url($link).'">';
+					$out .= '<a rel="external" href="'.esc_url($link).'">';
 				}
 
 					if( $company = get_post_meta( $post->ID, '_testimonial_company', true ) )
