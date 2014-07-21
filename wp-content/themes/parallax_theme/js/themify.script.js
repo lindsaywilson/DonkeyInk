@@ -125,7 +125,12 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 										if( section == currentHash || section == '#header' ) return;
 										
 										self.setHash(section);
-										$('a[href*='+section+']').parent('li').addClass('current_page_item').siblings().removeClass('current_page_item current-menu-item');
+										var navlink = $('a[href*='+section+']').parent('li');
+										navlink.addClass('current_page_item').siblings().removeClass('current_page_item current-menu-item');
+										navlink.siblings('li#menu-item-2225').children().find('.current_page_item').removeClass('current_page_item');
+										if(navlink.parents('ul.sub-menu').length > 0){
+											navlink.parents('li').addClass('current_page_item').siblings().removeClass('current_page_item current-menu-item');
+										}
 										
 									}
 								}
@@ -321,7 +326,6 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 	// Fixed Header /////////////////////////
 	FixedHeader = {
 		init : function() {
-			this.headerHeight = $('#header').outerHeight() - $('#nav-bar').outerHeight();
 
 			if ( $('body').hasClass('ie') ) { $('html, body').addClass('iefix'); }
 
@@ -330,11 +334,22 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 			.on('touchmove.touchScroll', this.activate);
 		},
 		activate : function() {
-
+			
+			FixedHeader.headerHeight = $('#header').outerHeight() - $('#nav-bar').outerHeight();
+			FixedHeader.navHeight = $('#header').outerHeight() - $('#nav-bar').outerHeight() - $('#main-nav').outerHeight() - $('#menu-item-2225 ul').outerHeight();
+			if($(window).width() <= 1100){
+				FixedHeader.navHeight = FixedHeader.navHeight + $('#menu-item-2225 ul').outerHeight();
+			}
+			
 			if ( $(window).scrollTop() <= FixedHeader.headerHeight ) {
 				FixedHeader.scrollDisabled();
 			} else {
 				FixedHeader.scrollEnabled();
+			}
+			if ( $(window).scrollTop() >= FixedHeader.navHeight ) {
+				FixedHeader.droppedDownEnabled();
+			} else {
+				FixedHeader.droppedDownDisabled();
 			}
 		},
 		scrollDisabled : function() {
@@ -344,6 +359,12 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 		scrollEnabled : function() {
 			$('#nav-bar').addClass('fixed-nav-bar');
 			$('body').addClass('fixed-header-on');
+		},
+		droppedDownDisabled : function() {
+			$('#nav-bar').removeClass('droppedDown');
+		},
+		droppedDownEnabled : function() {
+			$('#nav-bar').addClass('droppedDown');
 		}
 	};
 

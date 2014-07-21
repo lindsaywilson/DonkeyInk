@@ -33,10 +33,10 @@
 			<hgroup>
 				<h1 id="site-logo"><a class="icon-logo" title="Donkey Ink Design" href="http://local.donkeyink.com">Donkey Ink Design</a></h1>
 				<div class="intro-text">
-                <p>Donkey Ink Design is mostly one guy* and that one guy is me, Jamie Purches. Hello.</p>
+                <p>Donkey Ink Design is mostly one guy<span class="hide-mobile">*</span> and that one guy is me, Jamie Purches. Hello.</p>
                 <p>I'm a Vancouver-based Art and Interactive Design Director with a solid understanding of brand, graphic, and interactive UI/UX design for web and mobile.</p>
                 <p class="welcome UniSansSemiBold">Welcome to my portfolio.</p>
-                <p class="UniSansSemiBold micetype">*See the <a href="#about">About</a> section to learn more about Donkey Ink Design contributors</p>
+                <p class="UniSansSemiBold micetype hide-mobile">*See the <a href="/#about">About</a> section to learn more about Donkey Ink Design contributors</p>
                 </div>
 
                 

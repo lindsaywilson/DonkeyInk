@@ -9,7 +9,8 @@ body{ font-family:'UniSansRegular'; color:#000; .font-size(1.8); line-height:1.4
 ================================================ */
 
 #header{
-	hgroup{ width:710px; margin:0 auto; .font-size(2); text-align:left; padding-left:250px; color:#2e2d2d}
+	height:600px;
+	hgroup{ width:710px; margin:0 auto; .font-size(2); text-align:left; padding-left:250px; color:#2e2d2d; transform:none!important}
 	h1#site-logo {font-size: 0.01em; height: 205px; padding-top: 140px; }
 	h1#site-logo a{ color:rgba(255,255,255,0)}
 	.icon-logo:before { .font-size(23); height: 1px; line-height: 1px; color:#000}
@@ -20,6 +21,11 @@ body{ font-family:'UniSansRegular'; color:#000; .font-size(1.8); line-height:1.4
 	.welcome{ .font-size(2.4)}
 	.micetype{ margin-top:30px}
 	.icon-van{ position:absolute; top:0px; right:20px; .font-size(9); opacity:.5}
+}
+.ie #header {
+	h1#site-logo{ padding-top:200px}
+	.intro-text{ padding-top:60px}
+	.icon-van{ top:60px;}
 }
 
 
@@ -33,7 +39,7 @@ body{ font-family:'UniSansRegular'; color:#000; .font-size(1.8); line-height:1.4
 .footer-text { .font-size(1.4); display: block; margin: 0 auto; padding-top: 30px; text-align: center; line-height:1.6}
 
 .back-top { font-size:2.4rem; display: block; text-align: center; line-height:1}
-.back-top a:before{ content: "\e600"; font-family:'icomoon'; display:block; color:#d2ddd3; font-size:8rem; line-height:1; transform:rotate(270deg); -ms-transform:rotate(-90deg); -webkit-transform:rotate(-90deg); -moz-transform:rotate(-90deg); margin:0 auto -20px; width:1em; height:1em; .transition();}
+.back-top a:before{ content: "\e60a"; font-family:'icomoon'; display:block; color:#d2ddd3; font-size:8rem; line-height:1; margin:0 auto -20px;  .transition();}
 .back-top a:hover:before{ color:@red}
 
 
@@ -62,26 +68,36 @@ a.button:hover{ background:#c60000}
 .box.last{ float:none; display:inline-block}
 .box h3{ font-family:'UniSansSemiBold'; font-size:3rem; }
 
+#error-404 {
+	.section-inner{ padding-bottom:100px}
+	input[type="text"]{ background:#e8e8e8; margin-top:10px; max-width:400px}
+}
+
+
 
 /* 
 SECTIONS
 ================================================ */
 
-.section-inner{ padding:85px 0 45px}
+.section-inner{ padding:85px 0 80px}
 .section-title,
 .section-subhead{ text-align:center}
 .section-content{ text-align:center; margin-top: 20px;}
 
 .loops-wrapper.list-post .post { margin-bottom:15px} 
 
-section#about{ padding-bottom:100px}
+section#about .section-inner{ padding-bottom:120px}
 section#process{ 
 	color:#fff;
+	.section-inner{ padding-bottom:125px;}
 	.col2-1{ margin-top:50px; }
 	.col2-1.first{ text-align:right}
 	.col2-1.last{ text-align:left}
 }
-section#services .text{ margin-bottom:30px}
+section#services {
+	.section-inner{ padding-bottom:100px}
+	.text{ margin-bottom:30px}
+}
 section#contact form{ margin-top:40px; padding:0 85px}
 
 
@@ -91,14 +107,17 @@ section#contact form{ margin-top:40px; padding:0 85px}
 
 .section#portfolio-web-interactive{
 	background:url(images/tile_horizontal.png); color:#000;
+	.section-inner{ padding-bottom:10px}
 	.section-content{ margin-top: 40px;}
 }
 .section#portfolio-ink-paper{
 	background:url(images/tile_diagonal.png); color:#000; display:none;
+	.section-inner{ padding-bottom:10px}
 	.section-content{ margin-top: 40px;}
 }
 .section#portfolio-logo-brand{
 	background:url(images/tile_vertical.png); color:#000; display:none;
+	.section-inner{ padding-bottom:10px}
 	.section-content{ margin-top: 40px;}
 }
 #content .portfolio-expanded{ 
@@ -193,7 +212,7 @@ MAIN NAVIGATION
 .ie #nav-bar { position: fixed; top: 0; bottom: auto;}
 #nav-bar.fixed-nav-bar { position: fixed; top: 0; bottom: auto; left: 0;}
 .admin-bar #nav-bar.fixed-nav-bar { top: 32px;}
-.ie #main-nav { top: 60px; bottom: auto; }
+.ie #main-nav { top: 0; bottom: auto; }
 
 #main-nav {
 	text-align: center; overflow: visible; width:auto; position:absolute; left:35%;
@@ -218,11 +237,11 @@ MAIN NAVIGATION
 
 }
 
-.home #main-nav{
+#main-nav{
 	ul{ bottom: 56px;}
 	ul ul{ bottom: auto;}
 }
-.home .fixed-nav-bar #main-nav ul,
-.home.ie #main-nav ul { bottom: auto; top: 55px; border-bottom:solid 1px #b3b3b3; border-top:none }
-.home .fixed-nav-bar #main-nav ul ul,
-.home.ie #main-nav ul ul { top: -6px; }
+.droppedDown #main-nav ul,
+.ie #main-nav ul { bottom: auto; top: 55px; border-bottom:solid 1px #b3b3b3; border-top:none }
+.droppedDown #main-nav ul ul,
+.ie #main-nav ul ul { top: -6px; }

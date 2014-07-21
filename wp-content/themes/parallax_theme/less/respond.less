@@ -154,6 +154,8 @@
 	}
 	.fixed-nav-bar #main-nav {
 		position: absolute;
+	}
+	.droppedDown #main-nav {
 	    top: 55px;
 	    bottom: auto;
 	}
@@ -415,7 +417,7 @@
 	#header{
 		hgroup{ position:absolute; top:46%; left:49%; padding:0; width:auto}
 		h1#site-logo{ padding:0}
-		.icon-logo:before{font-size:16rem}
+		.icon-logo:before{font-size:26rem}
 		.icon-van{ .font-size(6.5); right:10px}
 	}
 	
@@ -424,7 +426,7 @@
 	section#about,
 	#main-nav li#menu-item-2346,
 	#main-nav li#menu-item-2224,
-	#intro-text .micetype,
+	#intro-text .hide-mobile,
 	#header .intro-text{ display:none}
 	
 	section#intro-text{ background:#1b2029; color:#fff; text-align:center}
@@ -457,6 +459,8 @@
 }
 
 @media screen and (max-width: 480px) {
+	
+	#header .icon-logo:before{font-size:16rem}
 	
 	#menu-icon { left:3%}
 	#main-nav{ text-align:left}

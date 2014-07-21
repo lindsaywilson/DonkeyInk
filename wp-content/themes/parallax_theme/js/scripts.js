@@ -26,11 +26,9 @@ jQuery(document).ready(function($) {
 			$('section#intro-text').hide();
 		}
 	}
+
 	
 	// Show/Hide Portfolios
-	$('#main-nav li a').click( function(){
-		$('.current_page_item').removeClass('current_page_item')
-	});
 	$('li#menu-item-2445 a, li#menu-item-2446 a, li#menu-item-2447 a').click( function(){
 		var portfolio = $(this).attr('href');
 		$("section[id^='portfolio']").hide();
