@@ -8,6 +8,7 @@ body{ font-family:'UniSansRegular'; color:#000; .font-size(1.8); line-height:1.4
  HEADER
 ================================================ */
 
+#headerwrap{ background:url(images/section_home.jpg) 50% 0 no-repeat; background-size:cover}
 #header{
 	height:600px;
 	hgroup{ width:710px; margin:0 auto; .font-size(2); text-align:left; padding-left:250px; color:#2e2d2d; transform:none!important}
@@ -38,8 +39,9 @@ body{ font-family:'UniSansRegular'; color:#000; .font-size(1.8); line-height:1.4
 #footer a{ color:@greengrey}
 .footer-text { .font-size(1.4); display: block; margin: 0 auto; padding-top: 30px; text-align: center; line-height:1.6}
 
-.back-top { font-size:2.4rem; display: block; text-align: center; line-height:1}
-.back-top a:before{ content: "\e60a"; font-family:'icomoon'; display:block; color:#d2ddd3; font-size:8rem; line-height:1; margin:0 auto -20px;  .transition();}
+.back-top { .font-size(2.4); display: block; text-align: center; line-height:1}
+.back-top a{ display:inline-block; padding-top:65px; position:relative}
+.back-top a:before{ content: "\e60a"; font-family:'icomoon'; display:block; color:#d2ddd3; .font-size(8); line-height:1; .transition(); position:absolute; top:0; width:100%}
 .back-top a:hover:before{ color:@red}
 
 
@@ -47,9 +49,10 @@ body{ font-family:'UniSansRegular'; color:#000; .font-size(1.8); line-height:1.4
  HTML ELEMENTS
 ================================================ */
 
-h1, h2, h3, h4, h5, h6{ font-weight:normal}
-h1{ .font-size(6)}
+h1, h2, h3, h4, h5, h6{ font-weight:normal; }
+h1{ .font-size(6); }
 h2{ .font-size(2.4)}
+.section-post h1{ margin-bottom:10px; line-height:1}
 
 a{ color:#000; text-decoration:none; .transition()}
 
@@ -66,7 +69,7 @@ a.button:hover{ background:#c60000}
 
 .box{ color:#fff; background:rgba(0,0,0,0.6); float:left; width:48%; padding:15px 10px 20px; margin:1%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .box.last{ float:none; display:inline-block}
-.box h3{ font-family:'UniSansSemiBold'; font-size:3rem; }
+.box h3{ font-family:'UniSansSemiBold'; .font-size(3); }
 
 #error-404 {
 	.section-inner{ padding-bottom:100px}
@@ -86,8 +89,20 @@ SECTIONS
 
 .loops-wrapper.list-post .post { margin-bottom:15px} 
 
-section#about .section-inner{ padding-bottom:120px}
+section#about,
+section#services,
+section#process,
+section#clients-feedback,
+section#contact{ background-attachment: fixed; background-repeat: no-repeat; background-size: cover;}
+
+section#about {
+	background-image:url(images/section_about.jpg);
+	.section-inner{ padding-bottom:120px}
+	.section-content a{ color:@red}
+	.section-content a:hover{ color:#fff}
+}
 section#process{ 
+	background-image:url(images/section_process.jpg);
 	color:#fff;
 	.section-inner{ padding-bottom:125px;}
 	.col2-1{ margin-top:50px; }
@@ -95,10 +110,19 @@ section#process{
 	.col2-1.last{ text-align:left}
 }
 section#services {
+	background-image:url(images/section_services.jpg);
 	.section-inner{ padding-bottom:100px}
 	.text{ margin-bottom:30px}
 }
-section#contact form{ margin-top:40px; padding:0 85px}
+section#clients-feedback {
+	background-image:url(images/section_clientsfeedback.jpg);
+	.themify_builder_slider li{ display:table; vertical-align:middle; height:100%}
+	.themify_builder_slider li .slide-content{ display:table-cell; vertical-align:middle; height:100%}
+}
+section#contact{
+	background-image:url(images/section_contact.jpg);
+	form{ margin-top:40px; padding:0 85px}
+}
 
 
 /* PORTFOLIO SECTION */
@@ -107,17 +131,17 @@ section#contact form{ margin-top:40px; padding:0 85px}
 
 .section#portfolio-web-interactive{
 	background:url(images/tile_horizontal.png); color:#000;
-	.section-inner{ padding-bottom:10px}
+	.section-inner{ padding-bottom:50px}
 	.section-content{ margin-top: 40px;}
 }
 .section#portfolio-ink-paper{
 	background:url(images/tile_diagonal.png); color:#000; display:none;
-	.section-inner{ padding-bottom:10px}
+	.section-inner{ padding-bottom:50px}
 	.section-content{ margin-top: 40px;}
 }
 .section#portfolio-logo-brand{
 	background:url(images/tile_vertical.png); color:#000; display:none;
-	.section-inner{ padding-bottom:10px}
+	.section-inner{ padding-bottom:50px}
 	.section-content{ margin-top: 40px;}
 }
 #content .portfolio-expanded{ 
@@ -126,7 +150,9 @@ section#contact form{ margin-top:40px; padding:0 85px}
 	.post-title { .font-size(3.4);}
 	.entry-content{ font-family:'UniSansSemiBold'; .font-size(1.6)}
 	.post-image{ margin-bottom:0}
-	.tasks{ .font-size(1.4); position:absolute; bottom:-55px; left:0; padding-right:120px}
+	.tasks,
+	.deliverables{ .font-size(1.4); position:absolute; bottom:-55px; left:0; padding-right:120px}
+	.deliverables{ padding-right:0}
 	a.visit-site{ .font-size(1.8);position:absolute; right:0; bottom:-55px; color:#000 }
 	a.visit-site:after{ content: "\e600"; border-left:1px solid #000; .font-size(2.8); position:relative; bottom:-8px; margin-left:10px }
 	a.visit-site:hover,
@@ -137,13 +163,14 @@ section#contact form{ margin-top:40px; padding:0 85px}
 	.themify_builder_content{ display:none}
 }
 
+
 .slideshow li{ position:relative}
 .post .carousel-pager a{ background:#c1c1c1!important}
 .post .carousel-pager .selected{ background:#c50000 !important}
 .slider-image-caption{ background:#000; font-family:'UniSansBold'; .font-size(1.4); width:100%}
 .carousel-prev, .carousel-next{ color:rgba(0,0,0,0)}
 .post .carousel-next:after,
-.post .carousel-prev:before{ font-family:'icomoon'; color:#fff; content: "\e600"; font-size:2.8rem;  padding:3px}
+.post .carousel-prev:before{ font-family:'icomoon'; color:#fff; content: "\e600"; .font-size(2.8);  padding:3px}
 .post .carousel-next:after{ border-left:1px solid #585c5b;}
 .post .carousel-prev:before{ border-right:1px solid #585c5b; content: "\e609";}
 .post .carousel-prev,
@@ -177,7 +204,7 @@ FORM
 
 .form-item{ margin-bottom:8px}
 .form-submit{ clear:both; padding-top:12px; position:relative}
-.form-submit:after{ position:absolute; content:"\e600"; right:50%; bottom:18px; color:#fff; font-size:2.9rem; display:block; width:1em; height:1em; background:#ff000; font-family: 'icomoon'; transform: translate(60px,0);}
+.form-submit:after{ position:absolute; content:"\e600"; right:50%; bottom:18px; color:#fff; .font-size(2.9); display:block; width:1em; height:1em; background:#ff000; font-family: 'icomoon'; transform: translate(60px,0);}
 .form-left{ float:left; width:33%; padding-right:10px}
 .form-right{ float:left; width:67%; padding-left:10px}
 p.form-footnote:last-of-type{ clear:both; padding-top:30px; .font-size(2.8); margin:0 -85px}

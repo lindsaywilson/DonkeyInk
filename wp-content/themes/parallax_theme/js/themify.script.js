@@ -699,7 +699,7 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 							$( '.slideshow', $newElems).attr( 'data-id', slider_id );
 							createCarousel( $( '.slideshow', $newElems ), 'expanded' );
 						}
-						themeScrollTo( $('.portfolio-expanded').offset().top - menuHeight, 1000 );
+						themeScrollTo( $('.portfolio-expanded').offset().top - menuHeight - 20, 1000 );
 						$body.trigger('portfolio_expanded');
 					});
 					

@@ -450,7 +450,6 @@ GRID
 HEADER
 *************************************************************************************/
 #headerwrap {
-  background: #000;
   width: 100%;
 }
 #header {
@@ -2156,6 +2155,10 @@ body {
 /*
  HEADER
 ================================================ */
+#headerwrap {
+  background: url(images/section_home.jpg) 50% 0 no-repeat;
+  background-size: cover;
+}
 #header {
   height: 600px;
 }
@@ -2245,20 +2248,29 @@ body {
   line-height: 1.6;
 }
 .back-top {
+  font-size: 24px;
   font-size: 2.4rem;
   display: block;
   text-align: center;
   line-height: 1;
+}
+.back-top a {
+  display: inline-block;
+  padding-top: 65px;
+  position: relative;
 }
 .back-top a:before {
   content: "\e60a";
   font-family: 'icomoon';
   display: block;
   color: #d2ddd3;
+  font-size: 80px;
   font-size: 8rem;
   line-height: 1;
-  margin: 0 auto -20px;
   transition: all 0s ease 0s, all 0.15s ease 0s;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 .back-top a:hover:before {
   color: #b30000;
@@ -2281,6 +2293,10 @@ h1 {
 h2 {
   font-size: 24px;
   font-size: 2.4rem;
+}
+.section-post h1 {
+  margin-bottom: 10px;
+  line-height: 1;
 }
 a {
   color: #000;
@@ -2348,6 +2364,7 @@ a.button:hover {
 }
 .box h3 {
   font-family: 'UniSansSemiBold';
+  font-size: 30px;
   font-size: 3rem;
 }
 #error-404 .section-inner {
@@ -2375,10 +2392,29 @@ SECTIONS
 .loops-wrapper.list-post .post {
   margin-bottom: 15px;
 }
+section#about,
+section#services,
+section#process,
+section#clients-feedback,
+section#contact {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section#about {
+  background-image: url(images/section_about.jpg);
+}
 section#about .section-inner {
   padding-bottom: 120px;
 }
+section#about .section-content a {
+  color: #b30000;
+}
+section#about .section-content a:hover {
+  color: #ffffff;
+}
 section#process {
+  background-image: url(images/section_process.jpg);
   color: #fff;
 }
 section#process .section-inner {
@@ -2393,11 +2429,30 @@ section#process .col2-1.first {
 section#process .col2-1.last {
   text-align: left;
 }
+section#services {
+  background-image: url(images/section_services.jpg);
+}
 section#services .section-inner {
   padding-bottom: 100px;
 }
 section#services .text {
   margin-bottom: 30px;
+}
+section#clients-feedback {
+  background-image: url(images/section_clientsfeedback.jpg);
+}
+section#clients-feedback .themify_builder_slider li {
+  display: table;
+  vertical-align: middle;
+  height: 100%;
+}
+section#clients-feedback .themify_builder_slider li .slide-content {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+section#contact {
+  background-image: url(images/section_contact.jpg);
 }
 section#contact form {
   margin-top: 40px;
@@ -2414,7 +2469,7 @@ section#contact form {
   color: #000;
 }
 .section#portfolio-web-interactive .section-inner {
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 .section#portfolio-web-interactive .section-content {
   margin-top: 40px;
@@ -2425,7 +2480,7 @@ section#contact form {
   display: none;
 }
 .section#portfolio-ink-paper .section-inner {
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 .section#portfolio-ink-paper .section-content {
   margin-top: 40px;
@@ -2436,7 +2491,7 @@ section#contact form {
   display: none;
 }
 .section#portfolio-logo-brand .section-inner {
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 .section#portfolio-logo-brand .section-content {
   margin-top: 40px;
@@ -2464,13 +2519,17 @@ section#contact form {
 #content .portfolio-expanded .post-image {
   margin-bottom: 0;
 }
-#content .portfolio-expanded .tasks {
+#content .portfolio-expanded .tasks,
+#content .portfolio-expanded .deliverables {
   font-size: 14px;
   font-size: 1.4rem;
   position: absolute;
   bottom: -55px;
   left: 0;
   padding-right: 120px;
+}
+#content .portfolio-expanded .deliverables {
+  padding-right: 0;
 }
 #content .portfolio-expanded a.visit-site {
   font-size: 18px;
@@ -2535,6 +2594,7 @@ section#contact form {
   font-family: 'icomoon';
   color: #fff;
   content: "\e600";
+  font-size: 28px;
   font-size: 2.8rem;
   padding: 3px;
 }
@@ -2631,6 +2691,7 @@ FORM
   right: 50%;
   bottom: 18px;
   color: #fff;
+  font-size: 29px;
   font-size: 2.9rem;
   display: block;
   width: 1em;
@@ -3253,21 +3314,39 @@ MAIN NAVIGATION
     margin: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
+  section#about,
+  section#process,
+  section#services,
+  section#clients-feedback,
+  section#contact {
+    background-position: 50% 0 !important;
+    background-attachment: scroll !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #headerwrap {
+    background-position: 38% 0 ! important;
+  }
   .logo .hide-mobile {
     display: none;
   }
   #nav-bar .logo {
     left: 25%;
   }
+  .form-submit:after {
+    display: none;
+  }
+  input[type="reset"],
+  input[type="submit"],
+  button {
+    padding-right: 15px;
+  }
 }
 @media screen and (max-width: 700px) {
-  #headerwrap {
-    background-position: 28% 0 ! important;
-  }
   #header hgroup {
     position: absolute;
-    top: 46%;
+    top: 38%;
     left: 49%;
     padding: 0;
     width: auto;
@@ -3276,6 +3355,7 @@ MAIN NAVIGATION
     padding: 0;
   }
   #header .icon-logo:before {
+    font-size: 260px;
     font-size: 26rem;
   }
   #header .icon-van {
@@ -3306,19 +3386,11 @@ MAIN NAVIGATION
   #content .portfolio-expanded {
     padding-bottom: 20px;
   }
-  #content .portfolio-expanded h2 {
-    position: absolute;
-    top: -15px;
-  }
-  #content .portfolio-expanded h1 {
-    position: absolute;
-    top: 5px;
-    width: 100%;
-  }
   #content .portfolio-expanded .post-image {
     padding-top: 80px;
   }
-  #content .portfolio-expanded .tasks {
+  #content .portfolio-expanded .tasks,
+  #content .portfolio-expanded .deliverables {
     position: static;
     padding: 20px 0 0;
     text-align: center;
@@ -3343,6 +3415,9 @@ MAIN NAVIGATION
   #clients-feedback .themify_builder_content {
     float: none;
     width: auto;
+  }
+  #clients-feedback .themify_builder_content .carousel-wrap {
+    padding: 0;
   }
   .post .module .carousel-next,
   .post .module .carousel-prev {
@@ -3371,6 +3446,7 @@ MAIN NAVIGATION
 }
 @media screen and (max-width: 480px) {
   #header .icon-logo:before {
+    font-size: 160px;
     font-size: 16rem;
   }
   #menu-icon {
@@ -3383,24 +3459,39 @@ MAIN NAVIGATION
     margin: 0;
     padding: 0 22px;
   }
-}
-@media screen and (max-width: 360px) {
-  section#services {
-    background-image: url(images/bg_section_services_mobile.jpg) !important;
-    background-position: 50% 0 !important;
-    background-attachment: scroll !important;
+  #content .portfolio-expanded .post-image {
+    padding-bottom: 20px;
   }
-  section#clients-feedback {
-    background-image: url(images/bg_section_feedback_mobile.jpg) !important;
-    background-position: 50% 0 !important;
-    background-attachment: scroll !important;
+  #content .portfolio-expanded h2 {
+    position: absolute;
+    top: -15px;
+  }
+  #content .portfolio-expanded h1 {
+    position: absolute;
+    top: 5px;
+    width: 100%;
   }
   #client-list {
     color: #ffffff;
   }
+  #headerwrap,
+  section#services,
+  section#clients-feedback,
   section#contact {
     background-position: 50% 0 !important;
     background-attachment: scroll !important;
+  }
+  #headerwrap {
+    background-image: url(images/section_home_mobile.jpg) !important;
+  }
+  section#services {
+    background-image: url(images/section_services_mobile.jpg) !important;
+  }
+  section#clients-feedback {
+    background-image: url(images/section_clientsfeedback_mobile.jpg) !important;
+  }
+  section#contact {
+    background-image: url(images/section_contact_mobile.jpg) !important;
   }
 }
 /* ------------------------------ */

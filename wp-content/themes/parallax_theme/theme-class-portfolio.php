@@ -92,7 +92,7 @@ if ( ! class_exists( 'Themify_Portfolio' ) ) {
 				if( '' == $image_h ){
 					$image_h = themify_check('setting-default_portfolio_index_image_post_height')?
 							themify_get('setting-default_portfolio_index_image_post_height'):
-							'175';
+							'222';
 				}
 				if( '' == $title ){
 					$title = themify_check('setting-default_portfolio_index_title')?

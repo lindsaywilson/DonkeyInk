@@ -401,23 +401,35 @@
 
 }
 
-
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
 	
+	section#about,
+	section#process,
+	section#services,
+	section#clients-feedback,
+	section#contact{ background-position:50% 0 !important; background-attachment:scroll !important}
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+#headerwrap{ background-position:38% 0! important}
+
 .logo .hide-mobile{ display:none}
 #nav-bar .logo{ left:25%}
+.form-submit:after{ display:none}
+input[type="reset"], input[type="submit"], button{ padding-right:15px}
 
 	
 }
 
 @media screen and (max-width: 700px) {
 	
-	#headerwrap{ background-position:28% 0! important}
 	#header{
-		hgroup{ position:absolute; top:46%; left:49%; padding:0; width:auto}
+		hgroup{ position:absolute; top:38%; left:49%; padding:0; width:auto}
 		h1#site-logo{ padding:0}
-		.icon-logo:before{font-size:26rem}
+		.icon-logo:before{.font-size(26)}
 		.icon-van{ .font-size(6.5); right:10px}
 	}
 	
@@ -435,10 +447,9 @@
 	
 	#content .portfolio-expanded{ 
 		padding-bottom:20px;
-		h2{ position:absolute; top:-15px}
-		h1{ position:absolute; top:5px; width:100%}
 		.post-image{ padding-top:80px}
-		.tasks{ position:static; padding:20px 0 0; text-align:center}
+		.tasks,
+		.deliverables{ position:static; padding:20px 0 0; text-align:center}
 		a.visit-site{ position:static; display:block; text-align:center; margin-top:20px}
 		a.visit-site:after{ border:none; margin:0; bottom:-6px}
 	}
@@ -447,6 +458,7 @@
 	
 	#client-list,
 	#clients-feedback .themify_builder_content{ float:none; width:auto}
+	#clients-feedback .themify_builder_content .carousel-wrap{ padding:0}
 	.post .module .carousel-next,  .post .module .carousel-prev{ display:none!important}
 	#clients-feedback .themify_builder_content .themify_builder_slider .slide-content{ margin:0}
 	.themify_builder_slider li{ .font-size(1.4)}
@@ -460,21 +472,29 @@
 
 @media screen and (max-width: 480px) {
 	
-	#header .icon-logo:before{font-size:16rem}
+	#header .icon-logo:before{.font-size(16)}
 	
 	#menu-icon { left:3%}
 	#main-nav{ text-align:left}
 	#main-nav li a{ margin:0; padding:0 22px;}
 	
-}
-
-
-@media screen and (max-width: 360px) {
+	#content .portfolio-expanded{
+		.post-image{ padding-bottom:20px}
+		h2{ position:absolute; top:-15px}
+		h1{ position:absolute; top:5px; width:100%}
+	}
 	
-	section#services{ background-image:url(images/bg_section_services_mobile.jpg)!important; background-position:50% 0 !important; background-attachment:scroll !important}
-	section#clients-feedback{ background-image:url(images/bg_section_feedback_mobile.jpg)!important; background-position:50% 0 !important; background-attachment:scroll !important}
 	#client-list{ color:#fff}
+	
+	#headerwrap,
+	section#services,
+	section#clients-feedback,
 	section#contact{ background-position:50% 0 !important; background-attachment:scroll !important}
+	
+	#headerwrap{ background-image:url(images/section_home_mobile.jpg)!important;}
+	section#services{ background-image:url(images/section_services_mobile.jpg)!important;}
+	section#clients-feedback{ background-image:url(images/section_clientsfeedback_mobile.jpg)!important; }
+	section#contact{ background-image:url(images/section_contact_mobile.jpg)!important;}
 
 }
 
