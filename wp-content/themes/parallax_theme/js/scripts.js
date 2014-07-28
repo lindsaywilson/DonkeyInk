@@ -32,10 +32,18 @@ jQuery(document).ready(function($) {
 	$('li#menu-item-2445 a, li#menu-item-2446 a, li#menu-item-2447 a').click( function(){
 		var portfolio = $(this).attr('href');
 		$("section[id^='portfolio']").hide();
-		$("section"+portfolio).show();
+		$("section"+portfolio).fadeIn();
 		$('#main-nav > li').removeClass('current_page_item');
 		$('li#menu-item-2225').addClass('current_page_item');
 	})
+	
+	$('section').each( function(){
+		var h = $(window).height();
+		$(this).css('height','');
+		if($(this).height() < h){
+			$(this).height(h + 10)
+		}
+	});
 
 
 })

@@ -35,22 +35,19 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 		}
 
 		Plugin.prototype = {
-			sections: ['#header'],
+			sections: [],
 			init : function() {
 				var self = this,
 					IE = this.ie();
 
-				// collects position scrollto
-				$('#main-nav li a').each(function() {
-					var url = $(this).prop('hash');
-					if ( 'undefined' != typeof url && url.indexOf('#') != -1 && url.length > 1) {
-						self.sections.push(url);
-					}
-				});
+				self.sections = $('#main-nav li a').map(function(){
+					return this.hash || null;
+				}).get();
+				self.sections.push('#header');
 
 				// click event
 				$('body').on('click', 'a[href*=#]', function(e) {
-					var elementClick = $(this).prop('hash');
+					var $this = $(this), elementClick = $this.prop('hash');
 					
 					if ( 'undefined' != typeof elementClick && elementClick.indexOf('#') != -1 && elementClick.length > 1 ) {
 						var destination = $(elementClick).offset().top + 10, newHash = '#' + elementClick.replace('#', '');
@@ -59,23 +56,21 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 						// update state
 						self.onClicking = true;
 
-						if ( ! $('body').hasClass('ie') ) {
-							e.preventDefault();
-							$("html,body").animate({
-								scrollTop: destination
-							}, self.options.speed, function(){
-								self.onClicking = false;
-							});
-						}
+						e.preventDefault();
+						$("html,body").animate({
+							scrollTop: destination
+						}, self.options.speed, function(){
+							// add active class
+							$this.parent('li').addClass('current_page_item').siblings().removeClass('current_page_item');
 
-						// add active class
-						$(this).parent('li').addClass('current_page_item').siblings().removeClass('current_page_item');
+							if(elementClick.replace('#','') !== 'header'){
+								self.setHash(newHash);
+							} else {
+								self.clearHash();
+							}
 
-						if(elementClick.replace('#','') !== 'header'){
-							self.setHash(newHash);
-						} else {
-							self.clearHash();
-						}
+							self.onClicking = false;
+						});
 
 						// close mobile menu
 						if($(window).width() <= 1100 && $('#main-nav').is(':visible')){
@@ -103,6 +98,9 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 					});
 
 					setInterval(function() {
+
+						if(self.onClicking) return;
+
 						if ( didScroll ) {
 							didScroll = false;
 							currentHash = window.location.hash.replace(/^#\!\//, "");
@@ -115,22 +113,23 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 								var section = value, obj = $(value);
 								if (obj.length > 0) {
 									var offsetY = obj.offset().top,
-										elemHeight = obj.height();
+										elemHeight = obj.outerHeight();
 
 									var offsetAmount = offsetY;
-									elemHeight = obj.height();
 									
 									if ( offsetAmount < window.pageYOffset && offsetAmount + elemHeight > window.pageYOffset ) {
-										if(self.onClicking) return;
 										if( section == currentHash || section == '#header' ) return;
 										
 										self.setHash(section);
+										
 										var navlink = $('a[href*='+section+']').parent('li');
 										navlink.addClass('current_page_item').siblings().removeClass('current_page_item current-menu-item');
 										navlink.siblings('li#menu-item-2225').children().find('.current_page_item').removeClass('current_page_item');
 										if(navlink.parents('ul.sub-menu').length > 0){
 											navlink.parents('li').addClass('current_page_item').siblings().removeClass('current_page_item current-menu-item');
 										}
+										
+										
 										
 									}
 								}
@@ -382,13 +381,8 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 				} else {
 					this.setup_effect_2();
 				}
-				this.headerParallax();
 			} else {
 				this.setBackground();
-			}
-
-			if ( themifyScript.transitionEffect ) {
-				this.parallaxElements();
 			}
 		},
 
@@ -454,46 +448,8 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 			}
 		},
 
-		headerParallax: function() {
-			// disable on ie
-			if ( is_ie() ) { return; }
-
-			$('#header hgroup').each(function(){
-				var self = ThemifyParallax,
-					$this = $(this),
-					offset = ($('body').hasClass('admin-bar')) ? 30 : 60,
-					elemnTop = parseInt( $('#site-logo').offset().top - offset ),
-					didScroll = false;
-
-				setInterval(function() {
-					if ( didScroll ) {
-						didScroll = false;
-						self.plHeaderRun($this, elemnTop, offset);
-					}
-				}, 550);
-
-				$(window).on('scroll touchstart.touchScroll touchmove.touchScroll', function(){
-					didScroll = true;
-				});
-			});
-		},
-
-		plHeaderRun: function($obj, elemnTop, offset) {
-			var scrollAmount = $(window).scrollTop(),
-				ratio = scrollAmount - elemnTop,
-				animateTop = -(ratio) + 'px';
-			
-			if(scrollAmount > (Math.max(elemnTop - 50,0) )){
-				$obj.css({
-					'-webkit-transform' : 'translateY('+animateTop+')',
-					'-moz-transform' : 'translateY('+animateTop+')',
-					'-o-transform' : 'translateY('+animateTop+')',
-					'-ms-transform' : 'translateY('+animateTop+')',
-					'transform' : 'translateY('+animateTop+')'
-				});
-			} else {
-				$obj.removeAttr('style');
-			}
+		newPos: function( pos, adjust, ratio ) {
+			return ((pos - adjust) * ratio)  + "px";
 		},
 
 		parallaxElements: function(){
@@ -575,33 +531,46 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 	// portfolio ajax post break point
 	function portfolio_item_break_point() {
 		// section portfolio break point
-		$('.section-post .shortcode.portfolio, .section-post .module-portfolio').each(function(){
+		$('.shortcode.portfolio, .module.module-portfolio').each(function(){
 			var selector = '', viewport = $(window).width();
 
 			// reset
 			$(this).find('.sec-post-break').remove();
 
 			if($(this).hasClass('grid2-thumb') || $(this).hasClass('grid2')){
-				selector = '.post:nth-child(2n+2)';
+				selector = '.post:nth-of-type(2n+2)';
 			} else if($(this).hasClass('grid4')) {
-				selector = '.post:nth-child(4n+4)';
+				selector = '.post:nth-of-type(4n+4)';
 			} else if($(this).hasClass('grid3')){
-				selector = '.post:nth-child(3n+3)';
+				selector = '.post:nth-of-type(3n+3)';
 			} else if($(this).hasClass('grid2')) {
-				selector = '.post:nth-child(2n+2)';
+				selector = '.post:nth-of-type(2n+2)';
 			} else {
-				selector = '.post:nth-child(1n+1)';
+				selector = '.post:nth-of-type(1n+1)';
 			}
 
 			// mobile
 			if(viewport < 480) {
-				selector = '.post:nth-child(1n+1)';
+				selector = '.post:nth-of-type(1n+1)';
 			}
 
 			$(this).find(selector).each(function(){
 				$('<div class="sec-post-break" />').insertAfter($(this));
 			});
 		});
+	}
+
+	// Returns real dimensions from scaled or hidden elements
+	function realDimension($obj, dimension) {
+		var $clone = $obj.clone().css('visibility', 'hidden').appendTo($('body') ),
+			value = 'width' == dimension ? $clone.width() : $clone.height();
+		$clone.remove();
+		return value;
+	}
+
+	// Execute Earlier than $.ready and $.load
+	if ( themifyScript.transitionEffect ) {
+		ThemifyParallax.parallaxElements();
 	}
 
 	/////////////////////////////////////////////
@@ -664,16 +633,15 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 
 		// Portfolio expand js
 		var portoInitialPos;
-		$('.section-post .shortcode.portfolio .porto-expand-js, .section-post .module-portfolio .porto-expand-js').on('click', function(e){
+		$('.porto-expand-js').on('click', function(e){
 			e.preventDefault();
 			var $this = $(this),
 				prefixLink = $this.data('prefix-link'),
 				url = UpdateQueryString( 'porto_expand', 1, $this.attr('href') ),
 				placehold = $this.closest('.post').nextAll('.sec-post-break').first();
 
-			if ( placehold.length === 0 ) {
-				placehold = $this.closest('.shortcode');
-			}
+			if ( placehold.length === 0 ) placehold = $this.closest('.shortcode');
+			if ( placehold.length === 0 ) placehold = $this.closest('.module-portfolio');
 
 			// cache the initial position
 			portoInitialPos = $(window).scrollTop();
@@ -699,7 +667,7 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 							$( '.slideshow', $newElems).attr( 'data-id', slider_id );
 							createCarousel( $( '.slideshow', $newElems ), 'expanded' );
 						}
-						themeScrollTo( $('.portfolio-expanded').offset().top - menuHeight - 20, 1000 );
+						themeScrollTo( $('.portfolio-expanded').offset().top - menuHeight -20, 1000 );
 						$body.trigger('portfolio_expanded');
 					});
 					
@@ -759,10 +727,20 @@ var ThemifyGallery, FixedHeader, ThemifyParallax;
 				}
 			});
 		}
-		$('.no-chart', $body ).each(function () {
-			$(this).css({
-				'width' : themifyScript.chart.size + 'px',
-				'height' : themifyScript.chart.size + 'px'
+		$('.no-chart', $body).each(function () {
+			var $self  = $(this),
+				$img   = $self.find('img'),
+				width  = themifyScript.chart.size,
+				height = themifyScript.chart.size;
+
+			if ( $img.length > 0 ) {
+				width  = realDimension($img, 'width');
+				height = realDimension($img, 'height');
+			}
+
+			$self.css({
+				'width' : width + 'px',
+				'height': height + 'px'
 			}).addClass('no-chart-ready');
 		});
 		
