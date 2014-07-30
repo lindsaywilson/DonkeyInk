@@ -2379,7 +2379,7 @@ a.button:hover {
 SECTIONS
 ================================================ */
 .section-inner {
-  padding: 85px 0 80px;
+  padding: 105px 0 80px;
 }
 .section-title,
 .section-subhead {
@@ -2515,6 +2515,9 @@ section#contact form {
   font-family: 'UniSansSemiBold';
   font-size: 16px;
   font-size: 1.6rem;
+}
+#content .portfolio-expanded .entry-content a {
+  color: #b30000;
 }
 #content .portfolio-expanded .post-image {
   margin-bottom: 0;
@@ -3448,6 +3451,9 @@ MAIN NAVIGATION
   #header .icon-logo:before {
     font-size: 160px;
     font-size: 16rem;
+  }
+  #header h1#site-logo {
+    width: 160px;
   }
   #menu-icon {
     left: 3%;

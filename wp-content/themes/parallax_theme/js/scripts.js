@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
 		$('li#menu-item-2225').addClass('current_page_item');
 	})
 	
-	$('section').each( function(){
+	$('section#contact').each( function(){
 		var h = $(window).height();
 		$(this).css('height','');
 		if($(this).height() < h){
