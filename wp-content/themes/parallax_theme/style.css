@@ -2379,7 +2379,7 @@ a.button:hover {
 SECTIONS
 ================================================ */
 .section-inner {
-  padding: 105px 0 80px;
+  padding: 85px 0 80px;
 }
 .section-title,
 .section-subhead {
@@ -2515,9 +2515,6 @@ section#contact form {
   font-family: 'UniSansSemiBold';
   font-size: 16px;
   font-size: 1.6rem;
-}
-#content .portfolio-expanded .entry-content a {
-  color: #b30000;
 }
 #content .portfolio-expanded .post-image {
   margin-bottom: 0;
@@ -3389,9 +3386,6 @@ MAIN NAVIGATION
   #content .portfolio-expanded {
     padding-bottom: 20px;
   }
-  #content .portfolio-expanded .post-image {
-    padding-top: 80px;
-  }
   #content .portfolio-expanded .tasks,
   #content .portfolio-expanded .deliverables {
     position: static;
@@ -3452,9 +3446,6 @@ MAIN NAVIGATION
     font-size: 160px;
     font-size: 16rem;
   }
-  #header h1#site-logo {
-    width: 160px;
-  }
   #menu-icon {
     left: 3%;
   }
@@ -3467,6 +3458,9 @@ MAIN NAVIGATION
   }
   #content .portfolio-expanded .post-image {
     padding-bottom: 20px;
+  }
+  #content .portfolio-expanded .post-image {
+    padding-top: 80px;
   }
   #content .portfolio-expanded h2 {
     position: absolute;

@@ -42,10 +42,8 @@ global $themify; ?>
 					foreach ( $gallery_images as $gallery_image ) { ?>
 						<li>
 							<?php if ( 'yes' != $themify->unlink_image ) : ?>
-								<a href="<?php echo themify_get_featured_image_link(); ?>">
 									<?php echo $themify->theme->portfolio_image($gallery_image->ID, $themify->width, $themify->height); ?>
 									<?php themify_zoom_icon(); ?>
-								</a>
 							<?php else : ?>
 								<?php echo $themify->theme->portfolio_image($gallery_image->ID, $themify->width, $themify->height); ?>
 							<?php endif; // unlink slider image ?>
