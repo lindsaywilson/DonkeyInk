@@ -16,21 +16,21 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-//define('DB_NAME', 'donkeyink');
-define('DB_NAME', 'db96676_live_donkeyink_wordpress');
+define('DB_NAME', 'donkeyink');
+//define('DB_NAME', 'db96676_live_did_wp');
 
 /** MySQL database username */
-//define('DB_USER', 'root');
-define('DB_USER', 'db96676_didword');
+define('DB_USER', 'root');
+//define('DB_USER', 'db96676_didword');
 //define('DB_USER', 'donkeyink');
 
 /** MySQL database password */
-//define('DB_PASSWORD', '');
-define('DB_PASSWORD', 'db_WD!donkey');
+define('DB_PASSWORD', '');
+//define('DB_PASSWORD', 'DKeifi2423e3');
 
 /** MySQL hostname */
-//define('DB_HOST', 'localhost');
-define('DB_HOST', ' internal-db.s96676.gridserver.com');
+define('DB_HOST', 'localhost');
+//define('DB_HOST', 'internal-db.s96676.gridserver.com ');
 //define('DB_HOST', 'mysql1087.servage.net');
 
 /** Database Charset to use in creating database tables. */
