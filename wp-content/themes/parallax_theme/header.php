@@ -44,7 +44,7 @@
         <span class="icon-van"></span>
 			<?php themify_header_start(); // hook ?>
 			<hgroup>
-				<h1 id="site-logo"><a class="icon-logo" title="Donkey Ink Design" href="/">Donkey Ink Design</a></h1>
+				<h1 id="site-logo"><span class="icon-logo"> Donkey Ink Design</span></h1>
 				<div class="intro-text">
                 <p>Donkey Ink Design is mostly one guy<span class="hide-mobile">*</span> and that one guy is me, Jamie Purches. Hello.</p>
                 <p>I'm a Vancouver-based Art and Interactive Design Director with a solid understanding of brand, graphic, and interactive UI/UX design for web and mobile.</p>
