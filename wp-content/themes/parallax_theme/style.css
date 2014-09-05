@@ -2333,7 +2333,7 @@ a.button span {
   font-size: 3rem;
   display: block;
   line-height: 1;
-  margin-bottom: 10px;
+  margin: 6px 0 10px;
   color: #ffffff;
 }
 a.button:hover {
