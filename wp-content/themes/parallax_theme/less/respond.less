@@ -53,7 +53,7 @@
 }
 
 
-@media screen and (max-width: 1100px) { 
+@media screen and (max-width: 930px) { 
 
 	/************************************************************************************
 	MOBILE NAV BUTTON
@@ -380,7 +380,7 @@
 
 }
 
-@media screen and (min-width: 1101px) {
+@media screen and (min-width: 931px) {
 
 	/* ensure #nav is visible on desktop version */
 	#main-nav {
@@ -411,12 +411,18 @@
 
 }
 
+@media screen and (max-width: 1150px) {
+	.logo .hide-mobile{ display:none}
+}
+
+@media screen and (min-width: 931px) and (max-width: 1150px) {
+	#main-nav { left: 20%; }
+}
 
 @media screen and (max-width: 768px) {
 
 #headerwrap{ background-position:38% 0! important}
 
-.logo .hide-mobile{ display:none}
 #nav-bar .logo{ left:25%}
 .form-submit:after{ display:none}
 input[type="reset"], input[type="submit"], button{ padding-right:15px}
@@ -449,6 +455,7 @@ input[type="reset"], input[type="submit"], button{ padding-right:15px}
 		padding-bottom:20px;
 		.tasks,
 		.deliverables{ position:static; padding:20px 0 0; text-align:center}
+		.post-image { min-height: 420px; }
 		a.visit-site{ position:static; display:block; text-align:center; margin-top:20px}
 		a.visit-site:after{ border:none; margin:0; bottom:-6px}
 	}
@@ -479,7 +486,7 @@ input[type="reset"], input[type="submit"], button{ padding-right:15px}
 	
 	#content .portfolio-expanded{
 		.post-image{ padding-bottom:20px}
-		.post-image{ padding-top:80px}
+		.post-image{ padding-top:80px; min-height: 270px; }
 		h2{ position:absolute; top:-15px}
 		h1{ position:absolute; top:5px; width:100%}
 	}
