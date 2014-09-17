@@ -47,8 +47,9 @@
 				<h1 id="site-logo"><span class="icon-logo"> Donkey Ink Design</span></h1>
 				<div class="intro-text">
                 <p>Donkey Ink Design is mostly one guy<span class="hide-mobile">*</span> and that one guy is me, Jamie Purches. Hello.</p>
-                <p>I'm a Vancouver-based Art and Interactive Design Director with a solid understanding of brand, graphic, and interactive UI/UX design for web and mobile.</p>
-                <p class="welcome UniSansSemiBold">Welcome to my portfolio.</p>
+                <p>I dig vans and wearing hoodies, but that's not why you're here, so…</p>
+                <p>I'm a Vancouver-based Art &amp; Interactive Design Director with over 12 years of real world experience and a solid understanding of brand, graphic, UI/UX, web, and mobile design.</p>
+                <p class="welcome UniSansSemiBold">Welcome to my website &amp; portfolio.</p>
                 <p class="UniSansSemiBold micetype hide-mobile">*See the <a href="/#about">About</a> section to learn more about Donkey Ink Design contributors</p>
                 </div>
 

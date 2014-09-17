@@ -2176,6 +2176,8 @@ body {
   font-size: 0.01em;
   height: 205px;
   padding-top: 140px;
+  color: transparent;
+  color: rgba(255, 255, 255, 0);
 }
 #header h1#site-logo a {
   color: rgba(255, 255, 255, 0);
@@ -2518,6 +2520,7 @@ section#contact form {
 }
 #content .portfolio-expanded .post-image {
   margin-bottom: 0;
+  min-height: 500px;
 }
 #content .portfolio-expanded .tasks,
 #content .portfolio-expanded .deliverables {
@@ -2999,7 +3002,7 @@ MAIN NAVIGATION
     float: none;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 930px) {
   /************************************************************************************
 	MOBILE NAV BUTTON
 	*************************************************************************************/
@@ -3299,7 +3302,7 @@ MAIN NAVIGATION
     width: 100% !important;
   }
 }
-@media screen and (min-width: 1101px) {
+@media screen and (min-width: 931px) {
   /* ensure #nav is visible on desktop version */
   #main-nav {
     display: block !important;
@@ -3326,12 +3329,19 @@ MAIN NAVIGATION
     background-attachment: scroll !important;
   }
 }
+@media screen and (max-width: 1150px) {
+  .logo .hide-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 931px) and (max-width: 1150px) {
+  #main-nav {
+    left: 20%;
+  }
+}
 @media screen and (max-width: 768px) {
   #headerwrap {
     background-position: 38% 0 ! important;
-  }
-  .logo .hide-mobile {
-    display: none;
   }
   #nav-bar .logo {
     left: 25%;
@@ -3393,6 +3403,9 @@ MAIN NAVIGATION
     position: static;
     padding: 20px 0 0;
     text-align: center;
+  }
+  #content .portfolio-expanded .post-image {
+    min-height: 420px;
   }
   #content .portfolio-expanded a.visit-site {
     position: static;
@@ -3463,6 +3476,7 @@ MAIN NAVIGATION
   }
   #content .portfolio-expanded .post-image {
     padding-top: 80px;
+    min-height: 270px;
   }
   #content .portfolio-expanded h2 {
     position: absolute;
