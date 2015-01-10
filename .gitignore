@@ -9,3 +9,4 @@ wp-content/cache
 
 # Ignore grunt/node setup
 wp-content/themes/parallax_theme/node_modules
+/wp-config.php
